@@ -1,0 +1,39 @@
+<div class="container">
+  <h2>   FAQ </h2>
+  <div>
+    <div class="col-md-12">
+      <div *ngIf="laster">Laster spørsmål.....</div>
+      <div name="billett" >
+        <div *ngFor="let spørsmål of billettSpørsmål; let i = index">
+          <div>{{spørsmål.spørsmål}}</div>
+          <button class='btn btn-primary' (click)="visBillettSvar(i)">Send inn nytt spørsmål</button>
+          <div *ngIf="visBillett[i]">{{spørsmål.svar}}</div>
+        </div>
+      </div>
+      <div name="innlogging">
+        <div *ngFor="let spørsmål of innloggingSpørsmål; let i = index">
+          <div>{{spørsmål.spørsmål}}</div>
+          <button class='btn btn-primary' (click)="visInnloggingSvar(i)">Send inn nytt spørsmål</button>
+          <div *ngIf="visInnlogging[i]">{{spørsmål.svar}}</div>
+        </div>
+      </div>
+      <div name="rute">
+        <div *ngFor="let spørsmål of ruteSpørsmål; let i = index">
+          <div>{{spørsmål.spørsmål}}</div>
+          <button class='btn btn-primary' (click)="visRuteSvar(i)">Send inn nytt spørsmål</button>
+          <div *ngIf="visRute[i]">{{spørsmål.svar}}</div>
+        </div>
+      </div>
+      <div name="annet">
+        <div *ngFor="let spørsmål of andreSpørsmål; let i = index">
+          <div>{{spørsmål.spørsmål}}</div>
+          <button class='btn btn-primary' (click)="visAndreSvar(i)">Send inn nytt spørsmål</button>
+          <div *ngIf="visAndre[i]">{{spørsmål.svar}}</div>
+        </div>
+      </div>
+
+      <h3>Fant du ikke svar på det du lurte på? Send inn spørsmålet, så vil vi svare og legge det til her så fort vi kan </h3>
+      <button class='btn btn-primary' routerLink="/nyttSpørsmål">Send inn nytt spørsmål</button>
+    </div>
+  </div>
+</div>
