@@ -3,6 +3,6 @@ export class Spørsmål {
   spørsmål: string;
   svar: string;
   kategori: string;
-  tommelOpp: string;//vurdere hvordan dette skal gjøres
-  tommelned: string;
+  tommelOpp: number;//vurdere hvordan dette skal gjøres
+  tommelned: number;
 }
